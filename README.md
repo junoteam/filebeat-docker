@@ -32,8 +32,11 @@ The container can be executed with:
 
 **filebeat.yml** - file is carefully adited.  
 There's example of sending Nginx *access.log* and *error.log* to remote Redis host.  
-In **filebeat.yml** you can find example of configuration to send logs to: Elasticsearch, Logstash, Redis.  
-I don't add things like stdout or output to file, because it's production setup.  
+
+In **filebeat.yml** you can find example of configuration to send logs to:  
+* Elasticsearch
+* Logstash
+* Redis  
 
 **ec2-64-89-134-148.us-west-1.compute.amazonaws.com - isn't real host. It's only example!**    
 
