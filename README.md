@@ -7,9 +7,14 @@ Elasticsearch, and Kibana.
 
 This repo contain:   
 - Dockerfile  
-- Start script   
-- filebeat.yml hand edited example  
+- Entrypoint script   
+- filebeat.yml
 - docker-compose (TO DO)  
+
+**Dockerfile** - config file to create Docker conatiner.   
+**executor.sh** - entrypoint script for Docker conatiner.  
+**filebeat.yml** - configuration file for Filebeat.  
+**docker-compose.yml** - configuration file for Docker Compose. 
 
 ### Usage  
 
