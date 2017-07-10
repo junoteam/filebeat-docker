@@ -2,8 +2,8 @@
 
 **Filebeat** - lightweight shipper for logs.  
 
-Filebeat is part of the Elastic Stack, meaning it works seamlessly with Logstash,   
-Elasticsearch, and Kibana.  
+[Filebeat](https://www.elastic.co/products/beats/filebeat) is part of the Elastic Stack, meaning it works seamlessly with Logstash,   
+Elasticsearch, and Kibana, also known as [The Open Source Elastic Stack](https://www.elastic.co/products). 
 
 This repo contain:   
 - Dockerfile  
