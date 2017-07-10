@@ -27,7 +27,11 @@ The image is available on Docker Hub and can be pulled with:
 ```docker pull linuxspace/filebeat```   
 
 The container can be executed with:  
-```docker container run -d linuxspace/filebeat``` 
+```docker container run --restart on-failure --name=filebeat -d -v /var/log/my_logs:/var/log/nginx linuxspace/filebeat``` 
+
+_Explanation:_ 
+For example your web appplication stores its logs to /var/log/my_logs,  
+you need to mount this directory to filebeat container.   
 
 If you want to build container by yourself:
 ```docker build -t mystaff/filebeat .```  
