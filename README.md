@@ -5,15 +5,19 @@
 [Filebeat](https://www.elastic.co/products/beats/filebeat) is part of the Elastic Stack, meaning it works seamlessly with Logstash,   
 Elasticsearch, and Kibana, also known as [The Open Source Elastic Stack](https://www.elastic.co/products). 
 
+Filebeat version is **5.4.3** that is most recent version in **Jul 2017**.   
+
 This repo contain:   
 - Dockerfile  
 - Entrypoint script   
 - filebeat.yml
+- tini 
 - docker-compose (TO DO)  
 
 **Dockerfile** - config file to create Docker conatiner.   
 **executor.sh** - entrypoint script for Docker conatiner.  
 **filebeat.yml** - configuration file for Filebeat.  
+**tini** - valid init for containers.  
 **docker-compose.yml** - configuration file for Docker Compose. 
 
 ### Usage  
