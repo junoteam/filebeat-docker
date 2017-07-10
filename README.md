@@ -1,6 +1,7 @@
 ### Docker image for Elastic Filebeat  
 
 **Filebeat** - lightweight shipper for logs.  
+
 Filebeat is part of the Elastic Stack, meaning it works seamlessly with Logstash,   
 Elasticsearch, and Kibana.  
 
