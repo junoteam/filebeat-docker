@@ -7,7 +7,8 @@ Elasticsearch, and Kibana, also known as [The Open Source Elastic Stack](https:/
 
 Filebeat version is **5.4.3** that is most recent version in **Jul 2017**.   
 
-This repo contain:   
+The Filebeat docker conatiner built on top of:
+- ubuntu 16:04   
 - Dockerfile  
 - Entrypoint script   
 - filebeat.yml
@@ -29,7 +30,7 @@ The container can be executed with:
 ```docker container run -d linuxspace/filebeat``` 
 
 If you want to build container by yourself:
-docker build   
+```docker build -t mystaff/filebeat .```  
 
 ### Filebeat configuration
 
@@ -42,3 +43,4 @@ In **filebeat.yml** you can find example of configuration to send logs to:
 * Redis  
 
 **ec2-64-89-134-148.us-west-1.compute.amazonaws.com - isn't real host. It's only example!**    
+
