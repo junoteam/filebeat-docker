@@ -1,0 +1,57 @@
+# Filebeat to check config: 
+### filebeat -e -c filebeat.yml --configtest
+# Filebeat run with debug log: 
+### filebeat -e -c filebeat.yml
+# Filebeat run in background
+### filebeat -c filebeat.yml &
+######################## Filebeat Configuration ############################
+
+#=========================== Filebeat prospectors =============================
+
+# List of prospectors to fetch data.
+filebeat.prospectors:
+#------------------------------ Log prospector --------------------------------
+- input_type: log
+  paths:
+    - "/var/log/nginx/access.log"
+  document_type: nginx_access_log
+  scan_frequency: 1s
+  harvester_buffer_size: 16384
+
+  paths:
+    - "/var/log/nginx/error.log"
+  document_type: nginx_error_log
+  scan_frequency: 1s
+  harvester_buffer_size: 16384
+
+#-------------------------- Elasticsearch output -------------------------------
+#output.elasticsearch:
+  #enabled: true
+  #hosts: ["localhost:9200"]
+
+#----------------------------- Logstash output ---------------------------------
+#output.logstash:
+  #enabled: true
+  #hosts: ["localhost:5044"]
+
+#------------------------------- Redis output ----------------------------------
+output.redis:
+  enabled: true
+  hosts: ["ec2-64-89-134-148.us-west-1.compute.amazonaws.com"]
+  port: 6379
+
+  # The name of the Redis list or channel the events are published to. The
+  # default is filebeat.
+  #key: filebeat
+
+  # The Redis database number where the events are published. The default is 0.
+  #db: 0
+
+# Logging to rotating files files. Set logging.to_files to false to disable logging to
+# files.
+logging.to_files: true
+logging.files:
+  path: ./logs
+  name: filebeat
+  rotateeverybytes: 10485760 # = 10MB
+  keepfiles: 7
