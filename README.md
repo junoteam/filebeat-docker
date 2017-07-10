@@ -26,7 +26,10 @@ The image is available on Docker Hub and can be pulled with:
 ```docker pull linuxspace/filebeat```   
 
 The container can be executed with:  
-```docker run -d linuxspace/filebeat```   
+```docker container run -d linuxspace/filebeat``` 
+
+If you want to build container by yourself:
+docker build   
 
 ### Filebeat configuration
 
@@ -39,5 +42,3 @@ In **filebeat.yml** you can find example of configuration to send logs to:
 * Redis  
 
 **ec2-64-89-134-148.us-west-1.compute.amazonaws.com - isn't real host. It's only example!**    
-
-
