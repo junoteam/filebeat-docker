@@ -27,3 +27,14 @@ The image is available on Docker Hub and can be pulled with:
 
 The container can be executed with:  
 ```docker run -d linuxspace/filebeat```   
+
+### Filebeat configuration
+
+**filebeat.yml** - file is carefully adited.  
+There's example of sending Nginx *access.log* and *error.log* to remote Redis host.  
+In **filebeat.yml** you can find example of configuration to send logs to: Elasticsearch, Logstash, Redis.  
+I don't add things like stdout or output to file, because it's production setup.  
+
+**ec2-64-89-134-148.us-west-1.compute.amazonaws.com - isn't real host. It's only example!**    
+
+
