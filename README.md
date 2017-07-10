@@ -33,7 +33,7 @@ _Explanation:_
 For example your web appplication stores its logs to /var/log/my_logs,  
 you need to mount this directory to filebeat container.   
 
-If you want to build container by yourself:
+If you want to build container by yourself:  
 ```docker build -t mystaff/filebeat .```  
 
 ### Filebeat configuration
@@ -47,4 +47,5 @@ In **filebeat.yml** you can find example of configuration to send logs to:
 * Redis  
 
 **ec2-64-89-134-148.us-west-1.compute.amazonaws.com - isn't real host. It's only example!**    
+
 
